@@ -1,0 +1,33 @@
+<style>
+	.div1
+	{
+		margin-top: 20px;
+		height: 50%;
+		width: 50%;
+		background-color: lightblue;
+		border:double;
+		padding: 30px;
+	}
+	
+</style>
+<div class="div1" align="center" padding=1px>
+Enter Id<input type="text" name="" id="id"><br><br>
+<button onclick="search()">search</button>
+<button onclick="deletepro()">delete</button>
+<button onclick="showall()">showall</button><br><br>
+Name<input type="text" name="" id="name"><br><br>
+price<input type="number" name="" id="price"><br><br>
+category<input type="text" name="cat"><br><br>
+company<input type="text" name="com"><br><br>
+<button onclick="addpro()">add product</button>
+<button onclick="updatepro()">update product</button>
+</div>
+
+<script >
+	async function showall() {
+		let res= await fetch("https://restapiss.herokuapp.com/product");
+		let data=await res.json();
+		console.log(data);
+	}
+	
+</script>

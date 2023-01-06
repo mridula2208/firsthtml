@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: antiquewhite;
+    font: optional;
+    font-size: large;
+}
+#board{
+    background-color: aquamarine;
+    justify-content: center;
+    justify-items: center;
+    border: 1px;
+}
+.box{
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 3;
+    height: 200px;
+}

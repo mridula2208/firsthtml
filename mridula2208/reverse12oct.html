@@ -1,0 +1,18 @@
+<script>
+	function reverse(n)
+	{
+		var rev=0;
+		while(n>0)
+		{
+			var r=n%10;
+			rev=rev*10+r;
+			n=parseInt(n/10);
+		}
+		console.log(rev);
+	}
+	reverse(50);
+	reverse(51);
+	reverse(5025);
+	reverse(6950);
+	reverse(5023741);
+</script>

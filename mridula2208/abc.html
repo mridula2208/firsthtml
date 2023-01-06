@@ -1,0 +1,18 @@
+result<input type="number" name="" id="p1" >
+first number<input type="text" name="" id="p2" >
+second number<input type="text" name="" id="p3" > 
+
+<button onclick="show()">PLUS</button>
+
+<script>
+	function show()
+	{
+	 let a= parseInt(document.getElementById('p2').value);
+ 	let b= parseInt(document.getElementById('p3').value);
+ 	let c =(a+b);
+ 	console.log(c);
+ 	document.getElementById('p1').value=c;
+
+ 
+	}
+	</script>

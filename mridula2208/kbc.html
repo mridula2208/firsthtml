@@ -1,0 +1,73 @@
+<h1 align="center" id="p1">Kaun Banega Crorepati</h1>
+<h1 id="q"></h1>
+<span id="a"></span><input type="radio" name="r" onclick="getans('a')">
+<span id="b"></span><input type="radio" name="r" onclick="getans('b')">
+<span id="c"></span><input type="radio" name="r" onclick="getans('c')">
+<span id="d"></span><input type="radio" name="r" onclick="getans('d')">
+<button onclick="display(t)">Next</button>
+
+<script>
+
+	let res=0;
+	let st;
+	let c=0;
+	let ans;
+	let t;
+	function getans(p)
+	{
+		ans=p;
+	}
+	let data=[
+	{"Q":"where Mahakal lok is situated?",a:'Indore',b:'ujjain',c:'bhopal',d:'delhi',ans:'b'},
+	{"Q":"where Mahakal  is situated?",a:'Indore',b:'ujjain',c:'bhopal',d:'delhi',ans:'b'},
+	{"Q":"where  lok is situated?",a:'Indore',b:'ujjain',c:'bhopal',d:'delhi',ans:'a'},
+	{"Q":"where taj mahal is situated?",a:'Indore',b:'ujjain',c:'bhopal',d:'delhi',ans:'b'},
+	{"Q":"where qutub Minar is situated?",a:'Indore',b:'ujjain',c:'bhopal',d:'delhi',ans:'d'},
+	{"Q":"where Red Fort is situated?",a:'Indore',b:'ujjain',c:'bhopal',d:'delhi',ans:'d'},
+	{"Q":"where rajwada is situated?",a:'Indore',b:'ujjain',c:'bhopal',d:'delhi',ans:'a'}
+	];
+	function show()
+	{
+		let n=10;
+		t=Math.random();
+			t=parseInt(t*10);
+			document.getElementById('q').innerHTML=data[t].Q;
+			document.getElementById('a').innerHTML=data[t].a;
+			document.getElementById('b').innerHTML=data[t].b;
+			document.getElementById('c').innerHTML=data[t].c;
+			document.getElementById('d').innerHTML=data[t].d;
+
+	
+	 st =setInterval(function () {
+		document.getElementById('p1').innerHTML=n;
+		n--;
+		if(n<=0)
+		{
+			display(t);
+		}
+	  },1000);
+	}
+	show();
+	function display(qno) 
+	{
+		if(data[qno].ans==ans)
+		{
+			res++;
+		}
+		clearInterval(st);
+		c++;
+		if (c>=3)
+		{
+			alert("your result" +res);
+			done();
+
+		}
+		else
+		{
+			show();
+		}
+	}
+	function done() {
+		window.location.href="bulb.html";
+	}	
+</script>

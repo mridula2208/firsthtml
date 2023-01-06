@@ -1,0 +1,18 @@
+<script>
+	var ar = [40,10,20,30,50];
+	for(var i=0;i<5;i++)
+	{
+		for(var j=i+1;j<5;j++)
+		{
+			if(ar[i]>ar[j])
+			{
+				var t = ar[i];
+				ar[i]=ar[j];
+				ar[j]=t;
+			}
+
+		}
+		document.write("<br>")
+	}
+	console.log(ar);
+</script>
